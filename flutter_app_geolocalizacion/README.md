@@ -14,3 +14,18 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# App de Geolocalización en Flutter
+
+## Requisitos
+- Flutter SDK
+- API Key de Google Maps
+
+## APIs activadas
+- Maps SDK for Android
+- Maps SDK for iOS
+
+## Ejecución
+flutter pub get  
+flutter run
+
