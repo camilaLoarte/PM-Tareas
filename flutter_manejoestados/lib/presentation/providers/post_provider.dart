@@ -19,23 +19,20 @@ class PostProvider extends ChangeNotifier {
   String errorMessage = '';
 
   Future<void> fetchPosts() async {
-    state = PostState.loading;
-    notifyListeners();
+  state = PostState.loading;
+  notifyListeners();
 
-    try {
-      final result = await service.getPosts();
+  try {
+    final result = await service.getPosts();
 
-      if (result.isEmpty) {
-        state = PostState.empty;
-      } else {
-        posts = result;
-        state = PostState.success;
-      }
-    } catch (e) {
-      state = PostState.error;
-      errorMessage = 'Error de red. Intenta nuevamente.';
-    }
+    // 🔒 FORZAR SUCCESS
+    posts = result;
+    state = PostState.success;
+  } catch (e) {
+    state = PostState.error;
+    errorMessage = 'Error de red';
+  }
 
-    notifyListeners();
+  notifyListeners();
   }
 }

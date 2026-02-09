@@ -10,10 +10,14 @@ void main() {
   final dio = DioClient.getDio();
 
   runApp(
-    ChangeNotifierProvider<PostProvider>(
-      create: (_) => PostProvider(
-        PostService(dio),
-      )..fetchPosts(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<PostProvider>(
+          create: (_) => PostProvider(
+            PostService(dio),
+          )..fetchPosts(),
+        ),
+      ],
       child: const MyApp(),
     ),
   );
@@ -24,9 +28,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PostScreen(),
+      home: const PostScreen(),
     );
   }
 }
