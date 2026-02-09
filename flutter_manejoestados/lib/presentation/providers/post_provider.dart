@@ -19,20 +19,15 @@ class PostProvider extends ChangeNotifier {
   String errorMessage = '';
 
   Future<void> fetchPosts() async {
-  state = PostState.loading;
-  notifyListeners();
+    state = PostState.loading;
+    notifyListeners();
 
-  try {
-    final result = await service.getPosts();
+    await Future.delayed(const Duration(seconds: 2));
 
-    // 🔒 FORZAR SUCCESS
-    posts = result;
-    state = PostState.success;
-  } catch (e) {
-    state = PostState.error;
-    errorMessage = 'Error de red';
-  }
+    // 🔒 FORZAR EMPTY
+    posts = [];
+    state = PostState.empty;
 
-  notifyListeners();
+    notifyListeners();
   }
 }
