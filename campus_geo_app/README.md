@@ -2,15 +2,26 @@
 
 A new Flutter project.
 
-## Getting Started
+# 📍 Campus Geo App – Auditoría de Eficiencia Geoespacial
 
-This project is a starting point for a Flutter application.
+Aplicación móvil desarrollada en Flutter orientada a la detección de proximidad geográfica dentro del campus universitario.  
+El proyecto fue optimizado bajo principios de **software verde**, reduciendo consumo energético, uso de CPU y carga innecesaria de recursos.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🎯 Objetivo del Proyecto
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Evaluar y mejorar la eficiencia arquitectónica de una aplicación geoespacial móvil mediante:
+
+- Comparativa técnica de librerías de ubicación.
+- Refactorización eliminando `setState`.
+- Implementación de Riverpod.
+- Estrategia de Lazy Loading para modelos 3D.
+- Análisis energético y reflexión ética sobre IA.
+
+---
+
+## 🏗 Arquitectura Implementada
+
+El proyecto sigue una estructura modular basada en separación por capas:
+

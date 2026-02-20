@@ -6,6 +6,7 @@ final locationRepositoryProvider = Provider<LocationRepository>((ref) {
   return LocationRepository();
 });
 
+//
 final locationStreamProvider = StreamProvider<Position>((ref) {
   final repository = ref.watch(locationRepositoryProvider);
 
